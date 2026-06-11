@@ -1,15 +1,17 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+--[[
 vim.opt.rtp:prepend("~/.local/share/nvim/pack/plugins/start/nvim-web-devicons")
 vim.opt.rtp:prepend("~/.local/share/nvim/pack/plugins/start/nvim-tree.lua")
+]]
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.opt.termguicolors = true
 
-vim.opt.clipboard ="unnamedplus"
+--vim.opt.clipboard ="unnamedplus"
 vim.opt.number = true
 vim.opt.relativenumber = true
 
@@ -17,6 +19,7 @@ local opts = {
 	noremap = true,
 	silent = true
 }
+
 
 -- Format
 vim.keymap.set("n","<S-A-f>","gg=G",opts)
@@ -34,7 +37,7 @@ vim.keymap.set("v","<A-k>",":m '<-2<CR>gv=gv",opts)
 -- Normal select all
 vim.keymap.set("n","<C-a>","ggvG$",opts)
 
-
+--[[
 -- Plugins
 require("nvim-tree").setup({
   view = {
@@ -49,4 +52,6 @@ require("nvim-tree").setup({
   }
 })
 
+
 vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
+]]
