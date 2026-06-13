@@ -37,19 +37,28 @@ vim.keymap.set("v","<A-k>",":m '<-2<CR>gv=gv",opts)
 -- Normal select all
 vim.keymap.set("n","<C-a>","ggvG$",opts)
 
+
+-- Change windows 
+vim.keymap.set("n","<C-h>","<C-w>h",opts)
+vim.keymap.set("n","<C-j>","<C-w>j",opts)
+vim.keymap.set("n","<C-k>","<C-w>k",opts)
+vim.keymap.set("n","<C-l>","<C-w>l",opts)
+
+
+
 --[[
 -- Plugins
 require("nvim-tree").setup({
-  view = {
-    width = 20,
-    side = "left"
-  },
-  renderer = {
-    group_empty = true  
-  },
-  filters = {
-    dotfiles = false   
-  }
+	view = {
+		width = 20,
+		side = "left"
+	},
+	renderer = {
+		group_empty = true  
+	},
+	filters = {
+		dotfiles = false   
+	}
 })
 
 
